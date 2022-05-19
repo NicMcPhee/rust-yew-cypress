@@ -49,13 +49,12 @@ impl Component for CounterComponent {
         let link = ctx.link();
         html! {
             <div class="container">
-                <p>{ self.count }</p>
-                <button onclick={link.callback(|_| Msg::AddOne)}>{ "+1" }</button>
-                <button onclick={link.callback(|_| Msg::AddTwo)}>{ "+2" }</button>
-                // a button that adds 3 to the count
-                <button onclick={link.callback(|_| Msg::AddThree)}>{ "+3" }</button>
-                <button onclick={link.callback(|_| Msg::Double)}>{ "*2" }</button>
-                <button onclick={link.callback(|_| Msg::Reset)}>{ "Reset" }</button>
+                <p data-cy="counter-display">{ self.count }</p>
+                <button data-cy="add-one-button" onclick={link.callback(|_| Msg::AddOne)}>{ "+1" }</button>
+                <button data-cy="add-two-button" onclick={link.callback(|_| Msg::AddTwo)}>{ "+2" }</button>
+                <button data-cy="add-three-button" onclick={link.callback(|_| Msg::AddThree)}>{ "+3" }</button>
+                <button data-cy="times-two-button" onclick={link.callback(|_| Msg::Double)}>{ "*2" }</button>
+                <button data-cy="reset-button" onclick={link.callback(|_| Msg::Reset)}>{ "Reset" }</button>
             </div>
         }
     }
