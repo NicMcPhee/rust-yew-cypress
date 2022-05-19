@@ -13,3 +13,6 @@ To-dos:
 - [] Maybe write a blog post and/or video about getting
      Cypress to work with Rust since there doesn't seem
      to be a lot about that out on the Internet.
+
+The initial Rust app is based heavily on
+[the video "Building a Rust App with Yew!"](<https://www.youtube.com/watch?v=KmOeFrwz8BM>).
