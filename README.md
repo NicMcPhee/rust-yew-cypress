@@ -3,9 +3,10 @@
 To-dos:
 
 - [X] Get all this up in GitHub
-- [ ] Probably split the Rust and Cypress/npm/JS code into separate directories
-- [ ] Implement Cypress tests
+- [x] Probably split the Rust and Cypress/npm/JS code into separate directories
+- [x] Implement Cypress tests
 - [ ] Turn this README into something useful
+- [ ] Set this up to run in GitHub.io
 - [ ] Implement unit tests
   - Not sure if we can do that if my state is stuck inside the component.
     I might need to refactor the state out of the component to be able to
