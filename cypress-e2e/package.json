@@ -1,0 +1,15 @@
+{
+  "name": "cypress-e2e",
+  "version": "1.0.0",
+  "description": "An experiment with using Cypress to provide E2E tests for a Rust+Yew web app",
+  "main": "index.js",
+  "scripts": {
+    "cypress:open": "cypress open",
+    "cypress:run": "cypress run"
+  },
+  "author": "Nic McPhee <mcphee@morris.umn.edu>",
+  "license": "MIT",
+  "devDependencies": {
+    "cypress": "^9.6.1"
+  }
+}
