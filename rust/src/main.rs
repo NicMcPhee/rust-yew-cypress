@@ -63,3 +63,39 @@ impl Component for CounterComponent {
 fn main() {
     yew::start_app::<CounterComponent>();
 }
+
+#[cfg(test)]
+mod tests {
+    use mockall::*;
+    use super::*;
+
+    #[test]
+    fn it_works() {
+        let result = 2 + 2;
+        assert_eq!(result, 4);
+    }
+
+    #[test]
+    fn can_create_component() {
+        let _component = CounterComponent {
+            count: 0
+        };
+    }
+
+    mock! {
+        Context<T> {}     // Name of the mock struct, less the "Mock" prefix
+        // impl Clone for MyStruct {   // specification of the trait to mock
+        //     fn clone(&self) -> Self;
+        // }
+    }
+
+    #[test]
+    fn can_add_one() {
+        let mut component = CounterComponent {
+            count: 0
+        };
+        let mockContext = MockContext::new();
+        let _ = component.update(&mockContext, Msg::AddOne);
+        assert_eq!(component.count, 1);
+    }
+}
